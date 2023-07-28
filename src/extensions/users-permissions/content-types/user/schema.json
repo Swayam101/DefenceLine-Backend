@@ -67,6 +67,18 @@
     },
     "fullName": {
       "type": "string"
+    },
+    "post_comment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::post-comment.post-comment",
+      "mappedBy": "users"
+    },
+    "networking": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::networking.networking",
+      "inversedBy": "author"
     }
   }
 }
