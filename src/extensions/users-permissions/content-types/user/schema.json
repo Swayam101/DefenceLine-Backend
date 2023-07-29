@@ -68,17 +68,17 @@
     "fullName": {
       "type": "string"
     },
-    "post_comment": {
+    "networkings": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::post-comment.post-comment",
-      "mappedBy": "users"
-    },
-    "networking": {
-      "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::networking.networking",
-      "inversedBy": "author"
+      "mappedBy": "author"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "author"
     }
   }
 }

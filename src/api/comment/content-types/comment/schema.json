@@ -4,8 +4,7 @@
   "info": {
     "singularName": "comment",
     "pluralName": "comments",
-    "displayName": "comment",
-    "description": ""
+    "displayName": "comment"
   },
   "options": {
     "draftAndPublish": true
@@ -17,8 +16,9 @@
     },
     "author": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "comments"
     },
     "networking": {
       "type": "relation",
