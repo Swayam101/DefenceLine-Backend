@@ -79,6 +79,12 @@
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "author"
+    },
+    "comment": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::comment.comment",
+      "inversedBy": "liked_bies"
     }
   }
 }

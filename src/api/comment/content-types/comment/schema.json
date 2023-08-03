@@ -4,7 +4,8 @@
   "info": {
     "singularName": "comment",
     "pluralName": "comments",
-    "displayName": "comment"
+    "displayName": "comment",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,6 +26,12 @@
       "relation": "manyToOne",
       "target": "api::networking.networking",
       "inversedBy": "comments"
+    },
+    "liked_bies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "comment"
     }
   }
 }
